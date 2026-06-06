@@ -1,0 +1,71 @@
+{
+  "test_blocks": 200,
+  "dict_training_blocks": 40,
+  "compression_level": 11,
+  "ncb_beats_zstd_count": 200,
+  "ncb_beats_zstd_pct": 100.0,
+  "ncb_mean_improvement_pct": 11.74,
+  "eth_extra_tb_saved": 14.0,
+  "stats": {
+    "gzip-9": {
+      "mean": 4.967,
+      "median": 4.865,
+      "min": 3.85,
+      "max": 8.78,
+      "wins": 0,
+      "wins_pct": 0.0,
+      "overall_ratio": 4.925,
+      "savings_pct": 79.7
+    },
+    "zstd-11": {
+      "mean": 5.708,
+      "median": 5.576,
+      "min": 4.132,
+      "max": 9.935,
+      "wins": 0,
+      "wins_pct": 0.0,
+      "overall_ratio": 5.687,
+      "savings_pct": 82.4
+    },
+    "zstd+dict-11": {
+      "mean": 5.372,
+      "median": 5.248,
+      "min": 4.282,
+      "max": 10.157,
+      "wins": 0,
+      "wins_pct": 0.0,
+      "overall_ratio": 5.287,
+      "savings_pct": 81.1
+    },
+    "NCB+gzip": {
+      "mean": 5.838,
+      "median": 5.728,
+      "min": 4.428,
+      "max": 10.366,
+      "wins": 0,
+      "wins_pct": 0.0,
+      "overall_ratio": 5.795,
+      "savings_pct": 82.7
+    },
+    "NCB+zstd-11": {
+      "mean": 6.175,
+      "median": 6.052,
+      "min": 4.5,
+      "max": 11.084,
+      "wins": 2,
+      "wins_pct": 1.0,
+      "overall_ratio": 6.147,
+      "savings_pct": 83.7
+    },
+    "NCB+dict-11": {
+      "mean": 6.378,
+      "median": 6.235,
+      "min": 4.976,
+      "max": 12.031,
+      "wins": 198,
+      "wins_pct": 99.0,
+      "overall_ratio": 6.296,
+      "savings_pct": 84.1
+    }
+  }
+}

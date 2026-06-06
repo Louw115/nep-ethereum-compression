@@ -1,0 +1,33 @@
+# Cache files
+*.pkl
+eth_cache.pkl
+block_cache.pkl
+
+# Per-run output files
+nep_results_*.json
+nep_reproduce_results.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

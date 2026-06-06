@@ -1,0 +1,26 @@
+Copyright (c) 2025 Lourens Wasserman. All rights reserved.
+
+EVALUATION LICENSE
+
+This software and the NEP (Neurop Encoding Protocol) specification, including
+all protocol design, algorithms, and reference implementation, are the
+intellectual property of Neurop Forge.
+
+Permission is granted to:
+  - View, run, and evaluate this software for personal or research purposes
+  - Reproduce benchmark results for independent verification
+
+Permission is NOT granted to:
+  - Use this software or protocol in any commercial product or service
+  - Integrate this software into any production system
+  - Redistribute, sublicense, or sell copies of this software or protocol
+  - Create derivative works for commercial purposes
+
+All commercial use, integration, or acquisition of rights to this software
+and the NEP protocol requires a written agreement with Lourens Wasserman.
+
+For licensing and acquisition inquiries, open an issue or contact via the
+repository profile.
+
+THE SOFTWARE IS PROVIDED "AS IS" FOR EVALUATION PURPOSES ONLY, WITHOUT
+WARRANTY OF ANY KIND.

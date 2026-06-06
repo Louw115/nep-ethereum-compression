@@ -1,28 +1,25 @@
-NEP — Neurop Encoding Protocol
-A structured encoding layer for Ethereum JSON-RPC block data that improves zstd compression by 12–21%.
-
+# NEP — Neurop Encoding Protocol
+**A structured encoding layer for Ethereum JSON-RPC block data that improves zstd compression by 12–21%.**
 NEP sits in front of zstd. It converts verbose Ethereum JSON into a compact binary format before the compressor runs. Not a compressor — a transform.
-
-Results
+---
+## Results
 Tested on real Ethereum mainnet blocks fetched live from a public RPC endpoint. No pre-built datasets.
-
-Method	Mean ratio	vs zstd	Win rate	Lossless
-gzip-9	4.97x	−13%	0/200	N/A
-brotli-11	5.34x	−6%	0/200	N/A
-zstd-9	5.71x	baseline	0/200	N/A
-zstd-9 + dict	5.37x	−6%	0/200	N/A
-NEP + gzip-9	5.84x	+2%	0/200	200/200 ✓
-NEP + zstd-9	6.18x	+8%	2/200	200/200 ✓
-NEP + zstd + dict	6.38x	+11.7%	200/200	200/200 ✓
-NEP beats plain zstd on every single block. Every output verified lossless.
-
-Independent reproducibility runs (consecutive recent blocks) show +16% to +21% — see NEP_BENCHMARK.md for the full three-tier results and explanation of the range.
-
-NeuropBlocks Demo — composable primitives outperform the full engine
-nep_blocks_demo.py rebuilds the NEP pipeline using 5 composable primitives from the NeuropBlocks library. No custom encoder — just blocks composed together.
-
-Run it yourself (requires only zstandard):
-
+| Method | Mean ratio | vs zstd | Win rate | Lossless |
+|---|---|---|---|---|
+| gzip-9 | 4.97x | −13% | 0/200 | N/A |
+| brotli-11 | 5.34x | −6% | 0/200 | N/A |
+| zstd-9 | 5.71x | baseline | 0/200 | N/A |
+| zstd-9 + dict | 5.37x | −6% | 0/200 | N/A |
+| NEP + gzip-9 | 5.84x | +2% | 0/200 | 200/200 ✓ |
+| NEP + zstd-9 | 6.18x | +8% | 2/200 | 200/200 ✓ |
+| **NEP + zstd + dict** | **6.38x** | **+11.7%** | **200/200** | **200/200 ✓** |
+**NEP beats plain zstd on every single block. Every output verified lossless.**
+Independent reproducibility runs (consecutive recent blocks) show +16% to +21% — see [NEP_BENCHMARK.md](NEP_BENCHMARK.md) for the full three-tier results and explanation of the range.
+---
+## NeuropBlocks Demo — composable primitives outperform the full engine
+`nep_blocks_demo.py` rebuilds the NEP pipeline using 5 composable primitives from the NeuropBlocks library. **No custom encoder — just blocks composed together.**
+Run it yourself (requires only `zstandard`):
+```bash
 pip install zstandard
 python nep_blocks_demo.py
 
